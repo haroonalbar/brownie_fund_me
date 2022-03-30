@@ -15,3 +15,11 @@ create brownie-config.yaml file
         brownie compile *works properly
 
 create deploy.py in scipts
+create helpful_scripts.py for adding getaccount()
+in yaml file make dotenv and wallets
+create .env and copy the .env of brownie simple storage
+
+for impoting from other scripts and packages.
+depending on the python version we may need to create a new file in scripts __init__.py
+may be you dont need it but just in case we might as well create it
+
