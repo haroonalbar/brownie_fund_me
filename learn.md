@@ -23,3 +23,13 @@ for impoting from other scripts and packages.
 depending on the python version we may need to create a new file in scripts __init__.py
 may be you dont need it but just in case we might as well create it
 
+brownie run deploy.py *for deploying it*
+the deployed contract cannot me seen in ether scan for the public to intract with
+so verify and publish the smart contract to eather scan
+etherscan doesnt know about @cahinlink importing
+to solve this go to etherscan.io and login and make a api key token
+set the api key an env
+and publish_source=True in deploy line
+
+deploy it again and go to rinkeby etherscan
+we can see the contract there and intract with it in etherscan by connecting metamask
