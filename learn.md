@@ -33,3 +33,27 @@ and publish_source=True in deploy line
 
 deploy it again and go to rinkeby etherscan
 we can see the contract there and intract with it in etherscan by connecting metamask
+
+to work with the local cahin is difficult because of pricefeed in the fundme smartcontract 
+that is made for the rinkeby network
+
+2 ways to get around this problem
+MOCK
+FORK
+
+we are going to use the mock method here
+
+change the fundme smartcontract parameterise it
+so the aggregatorV3 is not hard coded in fundme
+brownie compile //to check if it is working perfectly
+in yaml file add networks rinkeby price_feed_address=addressofrinkebypricefeed
+we can also add kovan and mainnet if want Here
+
+create new folder test in contracts to do mocks
+goto https://github.com/smartcontractkit/chainlink-mix
+create new mock contract in test aggregatorV3mock.sol
+copy the code from the site
+brownie compile
+
+
+
