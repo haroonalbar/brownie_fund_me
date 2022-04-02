@@ -62,5 +62,14 @@ open ganache ui and create a new local chain
 brownie run deploy.py
         it will automatically detect your local chain and deploy in it
 
+for the brownie to save changes in the local chain add a new network
+
+        brownie networks add Ethereum networkname host=url chainid=chainid
+        brownie networks add Ethereum ganache-local host=http://0.0.0.0:8545 chainid=5777
+
+to delete
+       
+        brownie networks delete networkname
+
 
 
