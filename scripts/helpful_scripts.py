@@ -3,8 +3,10 @@ from web3 import Web3
 
 LOCAL_BLOCKCAHIN_ENVIRONMENT = ["development", "dog"]
 
-DECIMALS = 18
-STARTING_PRICE = 2000
+# 8 because it follows ethusd pricefeed
+DECIMALS = 8
+STARTING_PRICE = 200000000000
+# 2000*10**10
 
 
 def get_account():
@@ -19,7 +21,5 @@ def deploy_mocks():
     print("Deploying Mocks ...")
     # we dont have to deploy every time
     if len(MockV3Aggregator) <= 0:
-        MockV3Aggregator.deploy(
-            DECIMALS, Web3.toWei(STARTING_PRICE, "ether"), {"from": get_account()}
-        )
+        MockV3Aggregator.deploy(DECIMALS, STARTING_PRICE, {"from": get_account()})
         print("Mocks Deployed!")

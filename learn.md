@@ -71,5 +71,11 @@ to delete
        
         brownie networks delete networkname
 
+brownie run deploy.py --network dog *dog is new network with cahin id 1337 . cahinid od 5777 is not working properly while deploying*
+
+new file fund_and_withdraw.py in scripts
+
+
+
 
 
