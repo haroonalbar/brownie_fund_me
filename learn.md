@@ -58,5 +58,9 @@ brownie compile
 add verify in networks on yaml in rinkeby set True and in development set False
 and set publish_source with config in deploy.py
 
+open ganache ui and create a new local chain
+brownie run deploy.py
+        it will automatically detect your local chain and deploy in it
+
 
 
