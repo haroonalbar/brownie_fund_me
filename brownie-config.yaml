@@ -13,5 +13,7 @@ networks:
     verify: True
   development:
     verify: False
+  dog:
+    verify: False
 wallets:
   from_key: ${PRIVATE_KEY}
