@@ -55,5 +55,8 @@ create new mock contract in test aggregatorV3mock.sol
 copy the code from the site
 brownie compile
 
+add verify in networks on yaml in rinkeby set True and in development set False
+and set publish_source with config in deploy.py
+
 
 
