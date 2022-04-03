@@ -1,7 +1,7 @@
-from scripts.helpful_scripts import get_account
+from scripts.helpful_scripts import get_account, LOCAL_BLOCKCAHIN_ENVIRONMENT
 from scripts.deploy import deploy_fund_me
-import importlib
-import imp
+from brownie import network, accounts, exceptions
+import pytest
 
 
 def test_can_fund_and_withdraw():
@@ -14,3 +14,13 @@ def test_can_fund_and_withdraw():
     tx2 = fund_me.withdraw({"from": account})
     tx2.wait(1)
     assert fund_me.addressToAmountFunded(account.address) == 0
+
+
+def test_only_owner_can_withdraw():
+    if network.show_active() not in LOCAL_BLOCKCAHIN_ENVIRONMENT:
+        pytest.skip("only for local testing")
+    fund_me = deploy_fund_me()
+    # random account
+    bad_actor = accounts.add()
+    with pytest.raises(exceptions.VirtualMachineError):
+        fund_me.withdraw({"from": bad_actor})

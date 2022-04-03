@@ -77,6 +77,9 @@ new file fund_and_withdraw.py in scripts
 
 new file test_fund_me.py in tests
 
+install pytest 
+        pip install pytest
+
 
 
 
