@@ -25,6 +25,8 @@ def deploy_fund_me():
         publish_source=config["networks"][network.show_active()].get("verify"),
     )
     print(f"Contract deployed to {fund_me.address}")
+    # for test to get fundme
+    return fund_me
 
 
 def main():

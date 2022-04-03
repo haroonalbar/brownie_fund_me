@@ -75,6 +75,7 @@ brownie run deploy.py --network dog *dog is new network with cahin id 1337 . cah
 
 new file fund_and_withdraw.py in scripts
 
+new file test_fund_me.py in tests
 
 
 
