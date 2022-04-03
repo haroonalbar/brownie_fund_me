@@ -80,6 +80,11 @@ new file test_fund_me.py in tests
 install pytest 
         pip install pytest
 
+to fork from infura
+        brownie networks add development mainnet-fork-dev cmd=ganache-cli host=http://127.0.0.1 fork='https://infura.io/v3/$WEB3_INFURA_PROJECT_ID' accounts=10 mnemonic=brownie port=8545
+
+but infura is a bit slow while forking mainnet so we are going to use alchemy.io
+brownie networks add development mainnet-fork-dev cmd=ganache-cli host=http://127.0.0.1 fork='https://alchemy.io/v3/<key>' accounts=10 mnemonic=brownie port=8545
 
 
 
